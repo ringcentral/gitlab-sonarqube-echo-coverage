@@ -2,7 +2,7 @@
 ## Description
 Package sends a request to SonarQube API and prints coverage statistics inside gitlab pipeline.
 
-##Installation
+## Installation
 ```
 npm install @ringcentral/gitlab-sonarqube-echo-coverage
 // or
