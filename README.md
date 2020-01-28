@@ -16,7 +16,7 @@ Package can be configured with environment variables below
 |:-------------------|:----------------------------------------------------|
 | CI_COMMIT_REF_NAME | Gitlab CI env variable containing the source branch |
 | SONAR_HOST         | Variable containing sonar host                      |
-| SONAR_LOGIN        | Variable containing sonar token                     |
+| SONAR_TOKEN        | Variable containing sonar token                     |
 | SONAR_PROJECT      | Variable containing sonar project name              |
 
 ## Running

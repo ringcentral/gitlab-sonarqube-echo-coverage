@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const querystring = require('querystring');
 
-const {CI_COMMIT_REF_NAME, SONAR_HOST, SONAR_LOGIN, SONAR_PROJECT} = process.env;
+const {CI_COMMIT_REF_NAME, SONAR_HOST, SONAR_TOKEN, SONAR_PROJECT} = process.env;
 
 (async () => {
     const query = querystring.stringify({
@@ -10,7 +10,7 @@ const {CI_COMMIT_REF_NAME, SONAR_HOST, SONAR_LOGIN, SONAR_PROJECT} = process.env
         metricKeys: 'coverage',
     });
     const response = await fetch(`${SONAR_HOST}/api/measures/component?${query}`, {
-        headers: {Authentication: `Basic ${SONAR_LOGIN}`},
+        headers: {Authentication: `Basic ${SONAR_TOKEN}`},
     });
     const data = await response.json();
 
