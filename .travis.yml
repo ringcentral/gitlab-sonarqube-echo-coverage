@@ -1,0 +1,18 @@
+language: node_js
+
+node_js: stable
+
+dist: trusty
+
+cache:
+  npm: true
+
+deploy:
+- provider: npm
+  email: kirill.konshin@gmail.com
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    node: stable
+    tags: true
+    repo: ringcentral/gitlab-sonarqube-echo-coverage
