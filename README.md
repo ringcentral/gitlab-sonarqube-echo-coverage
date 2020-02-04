@@ -2,6 +2,8 @@
 ## Description
 Package sends a request to SonarQube API and prints coverage statistics inside gitlab pipeline.
 
+The main use-case is [Gitlab's test coverage parsing](https://docs.gitlab.com/ee/user/project/pipelines/settings.html#test-coverage-parsing).
+
 ## Installation
 ```
 npm install @ringcentral/gitlab-sonarqube-echo-coverage
@@ -18,6 +20,8 @@ Package can be configured with environment variables below
 | SONAR_HOST         | Variable containing sonar host                      |
 | SONAR_TOKEN        | Variable containing sonar token                     |
 | SONAR_PROJECT      | Variable containing sonar project name              |
+
+Configure your [Gitlab's test coverage parsing](https://docs.gitlab.com/ee/user/project/pipelines/settings.html#test-coverage-parsing) with the following regular expression: `^OVERALL COVERAGE: (.+)$`.
 
 ## Running
 Run this script at the end of your pipeline (the best option is right after sonar coverage upload completed).
